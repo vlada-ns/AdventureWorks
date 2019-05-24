@@ -8,7 +8,9 @@ namespace WebApplication5.Interfaces
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetAll();
+        //IEnumerable<Product> GetAll();
+        //Task<IList<Product>> GetAll();
+        IList<Product> GetAll();
         Product GetById(int id);
         //IEnumerable<Product> GetByGodina(int godina);
         //IEnumerable<Product> GetPretraga(int najmanje, int najvise);

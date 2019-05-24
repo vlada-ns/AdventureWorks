@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,9 +27,22 @@ namespace WebApplication5.Repository
             return res > 0 ? true : false;
         }
 
-        public IEnumerable<Product> GetAll()
+        //public IEnumerable<Product> GetAll()
+        //{
+        //    return db.Product;
+        //}
+        //public Task<IEnumerable<Product>> GetAll()
+        //{
+        //    return Task.FromResult(db.Product.AsEnumerable());
+        //}
+        //public Task<List<Product>> GetAll()
+        //{
+        //    return Task.FromResult(db.Product.ToList());
+        //}
+
+        public IList<Product> GetAll()
         {
-            return db.Product;
+            return db.Product.ToList();
         }
 
         public Product GetById(int id)

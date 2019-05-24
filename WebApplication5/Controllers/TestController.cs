@@ -26,6 +26,11 @@ namespace WebApplication5.Controllers
             _repository = repository;
         }
 
+        //[HttpGet("[action]")]
+        //public Task<IEnumerable<Product>> ProductForecasts()
+        //{
+        //    return _repository.GetAll();
+        //}
         [HttpGet("[action]")]
         public IEnumerable<Product> ProductForecasts()
         {
@@ -33,6 +38,12 @@ namespace WebApplication5.Controllers
         }
 
         // GET: api/<controller>
+        //[HttpGet]
+        //public Task<IEnumerable<Product>> Get()
+        //{
+        //    // return new string[] { "value1", "value2" };
+        //    return _repository.GetAll();
+        //}
         [HttpGet]
         public IEnumerable<Product> Get()
         {
